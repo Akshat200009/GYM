@@ -1,0 +1,73 @@
+<!--  
+ Date: 1 Jan 2021 
+ Author:Akash Khandelwal -->
+ 
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Login Form</title>
+     <link rel="stylesheet" href="Css/style.css">
+ </head>
+ <body onload="slider()">
+     <div class="slider">
+        <img src="images/pic5.jpg" alt="" id="sliderchange">
+     </div>
+     <div class="overlay">
+        <div class="main-content">
+        <h1 class="colorchange">Register</h1>
+        <span id="border-bottom"></span>
+        <form action="" id="form-change">
+        <label for="name">Name</label>
+        <br>
+        <input type="text" id="name" placeholder="Enter Your name" maxlength="25" required>
+        <br>    
+        <label for="Age">Age</label>
+        <br>
+        <input type="number" id="age" placeholder="Enter Your Age" maxlength="25" required>
+        <br>
+        <label for="Gender">Gender</label>
+        <br>
+        <input type="text" id="gender" placeholder="Enter Your gender" maxlength="25" required>
+        <br>
+        <label for="Email">Email</label>
+        <br>
+        <input type="email" id="email" placeholder="Enter Your Email" maxlength="25" required>
+        <br>
+        <label for="contact">Mobile number</label>
+        <br>
+        <input type="number" id="contact" placeholder="Enter Your Mobile Number" maxlength="8" required>
+        <button class="btn3" type="submit"> Register </button>
+        </form>
+        </div>
+ 
+     </div>
+ 
+     <script>
+          var x = document.getElementById("sliderchange");
+         
+          var images = new Array(
+                 "images/pic1.jpg",
+                  "images/pic2.jpg",
+                  "images/pic3.jpg",
+                  "images/pic4.jpg",
+                  "images/pic5.jpg"
+             );
+          var len = images.length;
+          var i = 0;
+ 
+          function slider(){
+ 
+              if(i>len-1)
+              {
+                 i=0;
+              }
+              x.src = images[i];
+              i++;
+              setTimeout('slider()',3000)
+          }
+ 
+     </script>
+ </body>
+ </html>
